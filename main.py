@@ -12,13 +12,16 @@ def calculate(cotton_percentage: int = 100):
     polyester_percentage = 100 - int(cotton_percentage)
     print(Fore.CYAN + "\nCotton Percentage: ", Fore.RED + str(cotton_percentage))
     print(Fore.CYAN + "Polyester Percentage: ", Fore.RED + str(polyester_percentage), "\n")
-
-c_pcnt = int(input(Fore.CYAN + "What percentage of cotton is in your shirt?\n"))
+try:
+    c_pcnt = int(input(Fore.CYAN + "What percentage of cotton is in your shirt?\n"))
+except ValueError:
+    print(Fore.RED + "\n\nValues must be integers.")
+    quit()
 
 def look():
     if c_pcnt < 0 or c_pcnt > 100:
-        print(Fore.CYAN + "\n\nCotton percentage cannot be more than 100% or less than 0%")
-        return
+        print(Fore.RED + "\n\nCotton percentage cannot be more than 100% or less than 0%")
+        quit()
     else:
         pass
 
@@ -70,3 +73,5 @@ def final():
     print(Style.RESET_ALL + Fore.CYAN + "\n\nExpected Percent Decrease in Dimensions: {}%".format(Fore.RED + str(round(fin, 2))))
 
 final()
+
+# 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
