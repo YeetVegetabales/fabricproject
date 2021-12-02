@@ -73,7 +73,3 @@ def final():
     print(Style.RESET_ALL + Fore.CYAN + "\n\nExpected Percent Decrease in Dimensions: {}%".format(Fore.RED + str(round(fin, 2))))
 
 final()
-<<<<<<< HEAD
-=======
-
->>>>>>> 7d24559bde70abab938cd90615176e66f499c669
