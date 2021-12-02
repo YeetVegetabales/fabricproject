@@ -13,7 +13,7 @@ def calculate(cotton_percentage: int = 100):
     print(Fore.CYAN + "\nCotton Percentage: ", Fore.RED + str(cotton_percentage))
     print(Fore.CYAN + "Polyester Percentage: ", Fore.RED + str(polyester_percentage), "\n")
 try:
-    c_pcnt = int(input(Fore.CYAN + "What percentage of cotton is in your shirt?\n"))
+    c_pcnt = int(input(Fore.CYAN + "What percentage of cotton is in your shirt?\n\n"))
 except ValueError:
     print(Fore.RED + "\n\nValues must be integers.")
     quit()
@@ -34,7 +34,7 @@ def animate():
     for c in itertools.cycle(['|', '/', '-', '\\']):
         if done:
             break
-        sys.stdout.write(Fore.GREEN + Style.DIM + '\rLoading... ' + c)
+        sys.stdout.write(Fore.GREEN + Style.DIM + '\rCalculating... ' + c)
         sys.stdout.flush()
         time.sleep(0.1)
     sys.stdout.write('\r\n\n')
