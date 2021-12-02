@@ -13,7 +13,7 @@ def calculate(cotton_percentage: int = 100):
     print(Fore.CYAN + "\nCotton Percentage: ", Fore.RED + str(cotton_percentage))
     print(Fore.CYAN + "Polyester Percentage: ", Fore.RED + str(polyester_percentage), "\n")
 try:
-    c_pcnt = int(input(Fore.CYAN + "What percentage of cotton is in your shirt?\n\n"))
+    c_pcnt = int(input(Fore.CYAN + "\nWhat percentage of cotton is in your shirt?\n\n"))
 except ValueError:
     print(Fore.RED + "\n\nValues must be integers.")
     quit()
