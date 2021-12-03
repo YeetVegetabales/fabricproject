@@ -2,6 +2,8 @@ import matplotlib.pylab as plt
 
 coordinates = {}
 
+print("Loading...")
+
 def final():
     cotton_values = {50: 4.2, 60: 4.9, 90: 6.9, 100: 7.6}
     for i in range(0, 101):
